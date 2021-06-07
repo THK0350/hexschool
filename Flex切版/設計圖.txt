@@ -1,0 +1,11 @@
+https://xd.adobe.com/spec/934efdb7-a7e4-47d5-572e-efece0914f62-e57f/screen/9ba8ec87-c41b-474f-b92b-d2bb2fc7f922/specs/?fbclid=IwAR15fy4gQca7ZDUNrLwshygmfRsPpVtKRXW-ogWntmWT5WHXRzZ10ZG3Heg
+切版設計圖
+https://hexschool.github.io/webLayoutTraining1st/student-week1/p-1.png
+圖片路徑
+
+https://i.imgur.com/O7nQcFm.gif
+找圖片路徑辦法
+
+https://github.com/WanJiang018/Sweetate-html-practice/blob/main/index.html
+https://wanjiang018.github.io/Sweetate-html-practice/
+範例
