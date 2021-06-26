@@ -1,0 +1,39 @@
+//字型
+$font-family: "Ping Fang TC","SF Pro Text","Noto Sans TC","Roboto";
+
+//顏色
+$primary:#916000;
+$secondary:#AC8A46;
+$light:#fff;
+$dark:#000;
+$bg-dark:#E0E0E0;
+$font-gray:#8D8D8D;
+$bg-mbMenu: #707070;
+$product-icon:  #916019;
+
+//字體大小
+
+.font-size-1{
+    font-size: 16px;
+    line-height: 24px;
+}
+.font-size-2{
+    font-size: 20px;
+    line-height: 30px;
+}
+.font-size-3{
+    font-size: 24px;
+    line-height: 36px;
+}
+.font-size-4{
+    font-size: 28px;
+    line-height: 42px;
+}
+.font-size-5{
+    font-size: 32px;
+    line-height: 48px;
+}
+.font-size-6{
+    font-size: 40px;
+    line-height: 60px;
+}
