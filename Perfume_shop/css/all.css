@@ -109,6 +109,8 @@ img {
 
 .wrap {
   max-width: 1920px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-family: "Ping Fang TC", "SF Pro Text", "Noto Sans TC", "Roboto";
   margin: 0 auto;
   padding-left: 15px;
@@ -119,9 +121,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .logo {
@@ -157,14 +158,40 @@ img {
           align-items: center;
   margin-right: 3px;
 }
+.menu .m-display {
+  display: none;
+}
+@media (max-width: 568px) {
+  .menu .m-display {
+    display: block;
+  }
+}
 
 .banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   height: 870px;
   background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/index1.jpg?raw=true);
   background-size: cover;
   color: #fff;
   margin-bottom: 60px;
-  position: relative;
+}
+@media (max-width: 568px) {
+  .banner {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 .banner .banner-content {
   display: -webkit-box;
@@ -174,12 +201,22 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: absolute;
-  top: 295px;
-  right: 405px;
+  text-align: left;
+  margin-bottom: 10%;
+  margin-right: 10%;
+}
+@media (max-width: 568px) {
+  .banner .banner-content h2 {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .banner .banner-content p {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 .banner .banner-content h2, .banner .banner-content p {
-  max-width: 445px;
+  width: 445px;
 }
 .banner .banner-content a {
   margin-top: 16px;
@@ -198,7 +235,7 @@ img {
 .container {
   max-width: 1140px;
   padding-right: 15px;
-  padding-left: 15;
+  padding-left: 15px;
   margin: 0 auto;
 }
 
@@ -210,6 +247,12 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 1110px;
+}
+@media (max-width: 568px) {
+  .topProduct-row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .topProduct-rowReverse {
@@ -250,6 +293,13 @@ img {
   padding: 18px 0px;
   color: #000;
 }
+@media (max-width: 568px) {
+  .topProduct-content {
+    margin: 0 auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 
 .productItem {
   background: #E0E0E0;
@@ -272,9 +322,21 @@ img {
   margin-left: 8px;
   text-decoration: line-through;
 }
+@media (max-width: 568px) {
+  .productItem .productItem-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 .productItem img {
   width: 350px;
   height: 540px;
+}
+@media (max-width: 568px) {
+  .productItem img {
+    width: 345px;
+    height: 350px;
+  }
 }
 
 .bottle-recycling {
@@ -286,15 +348,43 @@ img {
   width: 730px;
   height: 520px;
 }
+@media (max-width: 568px) {
+  .bottle-recycling .bottle-recycling-img {
+    width: 345px;
+    height: 520px;
+  }
+}
+@media (max-width: 568px) {
+  .bottle-recycling {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 
 .topProduct-img img {
   width: 555px;
   height: 555px;
 }
+@media (max-width: 568px) {
+  .topProduct-img img {
+    width: 346px;
+    height: 360px;
+  }
+}
 
 .img-li {
   width: 555px;
   height: 1080px;
+}
+@media (max-width: 568px) {
+  .img-li {
+    width: 346px;
+    height: 360px;
+  }
 }
 
 .subscribe {
@@ -308,6 +398,7 @@ img {
   color: #8d8d8d;
   padding-top: 312px;
   padding-bottom: 20px;
+  font-weight: bold;
 }
 
 .btn-group {
@@ -370,6 +461,94 @@ img {
   color: #fff;
   font-weight: lighter;
   margin-left: 36px;
+}
+@media (max-width: 568px) {
+  .footer .footerMenu {
+    display: none;
+  }
+}
+
+.brandMenu {
+  background: #916000;
+}
+.brandMenu .brandMenu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.brandMenu .brandMenu-list a {
+  display: block;
+  color: #fff;
+  font-weight: lighter;
+  margin-left: 36px;
+}
+@media (max-width: 568px) {
+  .brandMenu {
+    display: none;
+  }
+}
+
+.productList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+.productList .productList-item {
+  padding-right: 20px;
+}
+@media (max-width: 568px) {
+  .productList .productList-item {
+    margin-bottom: 30px;
+    padding-right: 15px;
+  }
+}
+.productList .productList-item .itemImg {
+  width: 255px;
+  height: 255px;
+}
+@media (max-width: 568px) {
+  .productList .productList-item .itemImg {
+    width: 165px;
+    height: 165px;
+  }
+}
+.productList .productList-item p span {
+  margin-left: 8px;
+  color: #8D8D8D;
+  text-decoration: line-through;
+}
+.productList .productList-item a i {
+  width: 20px;
+  color: #916000;
+}
+
+.pageNum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.pageNum .page {
+  padding: 20px;
+  display: block;
+  color: #000;
+}
+.pageNum .page:hover {
+  color: #AC8A46;
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {

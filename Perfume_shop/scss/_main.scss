@@ -9,6 +9,7 @@
 }
 .wrap {
     max-width: 1920px;
+    flex-wrap: wrap;
     font-family: $font-family;
     margin: 0 auto;
     padding-left: 15px;
@@ -16,7 +17,7 @@
 }
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .logo {
     padding: 9px 0px;
@@ -45,23 +46,46 @@
             margin-right: 3px;
         }
     }
+    .m-display {
+        display: none;
+        @include mobile{
+            display: block;
+        }
+    }
 }
 
 .banner{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
     height: 870px;
     background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/index1.jpg?raw=true) ;
     background-size: cover;
     color: $light;
     margin-bottom: 60px;
-    position: relative;
+    @include mobile {
+        justify-content: center;
+        align-items: center;
+    }
     .banner-content{ 
         display: flex;
         flex-direction: column;
-        position: absolute;
-        top: 295px;
-        right: 405px;
+        text-align: left;
+        margin-bottom: 10%;
+        margin-right: 10%;
+
+        @include mobile{
+            h2 {
+                font-size: 32px;
+                line-height: 48px;
+            }
+            p {
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
         h2,p{
-            max-width: 445px;
+            width: 445px;
         }
         a{
             margin-top: 16px;
@@ -78,11 +102,10 @@
         }       
     }
 }
-
 .container {
     max-width: 1140px;
     padding-right: 15px;
-    padding-left: 15;
+    padding-left: 15px;
     margin: 0 auto;
 }
 
@@ -90,6 +113,9 @@
     display: flex;
     justify-content: space-between;
     max-width: 1110px;
+    @include mobile{
+        flex-wrap: wrap;
+    }
 }
 
 .topProduct-rowReverse {
@@ -119,6 +145,10 @@
         padding: 18px 0px ;
         color :$dark
     }
+    @include mobile {
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
 }
 
 .productItem {
@@ -136,30 +166,54 @@
                 text-decoration: line-through;
             }
         }
+        @include mobile {
+            flex-wrap: wrap;
+        }
     }
     img{
         width: 350px;
         height: 540px;
+        @include mobile {
+            width: 345px;
+            height: 350px;
+        }
     }
 }
 
 .bottle-recycling {
     display: flex;
-
     .bottle-recycling-img{
         width: 730px;
         height: 520px;
+        @include mobile {
+            width: 345px;
+            height: 520px;
+        }
     }
+@include mobile {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    flex-direction: column;
+}
+
 }
 
 .topProduct-img img{
     width: 555px;
     height: 555px;
+    @include mobile{
+        width: 346px;
+        height: 360px;
+    }
 }
 
 .img-li{
     width: 555px;
     height: 1080px;
+    @include mobile{
+        width: 346px;
+        height: 360px;
+    }
 }
 
 .subscribe{
@@ -173,6 +227,7 @@
     color: #8d8d8d;
     padding-top: 312px;
     padding-bottom: 20px;
+    font-weight: bold;
 }
 
 .btn-group {
@@ -223,8 +278,78 @@
             font-weight: lighter;
             margin-left: 36px;
         }
+        @include mobile{
+            display: none;
+        }
     }
 }
+
+
+.brandMenu {
+    background: $primary;
+    .brandMenu-list {
+        display: flex;
+        justify-content:start;
+        flex-wrap: wrap;
+        a {
+            display: block;
+            color: $light;
+            font-weight: lighter;
+            margin-left: 36px;
+        }
+    }
+    @include mobile{
+        display: none;
+    }
+}
+
+.productList{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    .productList-item{
+        padding-right: 20px;
+        @include mobile{
+            margin-bottom: 30px;
+            padding-right:15px;
+        }
+        .itemImg{
+            width: 255px;
+            height: 255px;
+            @include mobile{
+                width: 165px;
+                height: 165px;
+                
+            }
+        }
+        p span{
+            margin-left: 8px;
+            color: $font-gray;
+            text-decoration: line-through;
+        }
+        a i{
+            width: 20px;
+            color:$primary;
+        }
+    }
+}
+
+.pageNum {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .page {
+        padding: 20px;
+        display: block;
+        color: $dark;
+        &:hover{
+            color: $secondary;
+            text-decoration: underline;
+        }
+    }
+}
+
 @media (max-width:768px) {
     .header .menu{
         span {
@@ -243,7 +368,6 @@
         }
         .m-none {
             display: none;
-
         }
     } 
     .topProduct-rowReverse {
